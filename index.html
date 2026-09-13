@@ -1,86 +1,43 @@
 <!doctype html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bunnies ID — NewJeans</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <main class="page-shell">
-      <header class="hero">
-        <p class="eyebrow">A NEWJEANS FAN PROJECT · 2026</p>
-        <h1><span class="sparkle">✦</span> BUNNIES ID</h1>
-        <p class="intro">Crée ta carte membre NewJeans, juste pour toi.</p>
-      </header>
-
-      <section class="builder" aria-label="Créateur de carte">
-        <div class="controls">
-          <div class="step">
-            <span>01</span>
-            <h2>CHOISIS TON BIAS</h2>
-          </div>
-          <div class="member-grid" id="memberGrid"></div>
-
-          <div class="step second-step">
-            <span>02</span>
-            <h2>PERSONNALISE TA CARTE</h2>
-          </div>
-          <form id="cardForm" class="form-grid">
-            <label>NOM
-              <input id="name" type="text" maxlength="20" value="TON NOM" autocomplete="name" />
-            </label>
-            <label>VILLE / PAYS
-              <input id="location" type="text" maxlength="28" value="PARIS, FRANCE" />
-            </label>
-            <label>BUNNY DEPUIS
-              <select id="since">
-                <option>2018</option><option>2019</option><option>2020</option><option>2021</option><option>2022</option><option selected>2023</option><option>2024</option><option>2025</option><option>2026</option>
-              </select>
-            </label>
-            <label>CHANSON PRÉFÉRÉE
-              <select id="song">
-                <option>Attention</option><option>Hype Boy</option><option>Ditto</option><option>OMG</option><option>Super Shy</option><option>ETA</option><option>Cool With You</option><option>ASAP</option><option>How Sweet</option><option>Bubble Gum</option>
-              </select>
-            </label>
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bunnies ID — NewJeans</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="site">
+    <header class="masthead"><p>A NEWJEANS FAN PROJECT · 2026</p><h1>BUNNIES ID</h1><span>CREATE YOUR MEMBER CARD</span></header>
+    <div class="layout">
+      <aside class="editor">
+        <section><div class="section-title"><b>01</b><h2>CHOOSE YOUR BUNNIES ID</h2></div><div class="member-list" id="memberGrid"></div></section>
+        <section>
+          <div class="section-title"><b>02</b><h2>PERSONALIZE YOUR ID</h2></div>
+          <form id="cardForm" class="fields">
+            <label>NAME<input id="name" value="YOUR NAME" maxlength="22" autocomplete="name"></label>
+            <label>CITY / COUNTRY<input id="location" value="PARIS, FRANCE" maxlength="30"></label>
+            <label>BUNNY SINCE<select id="since"><option>2018</option><option>2019</option><option>2020</option><option>2021</option><option>2022</option><option selected>2023</option><option>2024</option><option>2025</option><option>2026</option></select></label>
+            <label>FAVORITE SONG<select id="song"><option>Attention</option><option>Hype Boy</option><option>Ditto</option><option>OMG</option><option>Super Shy</option><option>ETA</option><option>Cool With You</option><option>ASAP</option><option>How Sweet</option><option>Bubble Gum</option></select></label>
           </form>
-          <div class="actions desktop-actions">
-            <button id="download" class="button primary" type="button">TÉLÉCHARGER MA BUNNIES ID <b>↗</b></button>
-            <button id="reset" class="button text-button" type="button">RECOMMENCER <b>↻</b></button>
+        </section>
+        <div class="editor-actions"><button class="download" id="download" type="button">DOWNLOAD MY BUNNIES ID <i>↗</i></button><button class="restart" id="reset" type="button">MAKE ANOTHER <i>↻</i></button></div>
+      </aside>
+      <section class="preview">
+        <div class="preview-head"><span>LIVE PREVIEW</span><strong id="memberLabel">HANNI ID</strong></div>
+        <article class="membership-card" id="idCard">
+          <div class="card-band"><span class="asterisk">✳</span><span class="wordmark">NEWJEANS</span><small>BUNNIES CLUB</small></div>
+          <div class="card-content">
+            <div class="portrait"><img id="memberPhoto" src="assets/id/hanni.jpeg" alt="Hanni"></div><div class="member-number"><span>BUNNIES ID N.º</span><b id="idNumber">#0217</b></div>
+            <div class="details"><p class="card-caption">COMMUNITY MEMBER CARD</p><div class="data-row"><span>NAME</span><strong id="outName">YOUR NAME</strong></div><div class="data-row"><span>CITY / COUNTRY</span><strong id="outLocation">PARIS, FRANCE</strong></div><div class="data-row"><span>BUNNY SINCE</span><strong id="outSince">2023</strong></div><div class="data-row song"><span>FAVORITE SONG</span><strong id="outSong">Attention</strong></div><div class="seal">NJ<span>✳</span></div><div class="signature"><span>SIGNATURE</span><em id="signature">hanni</em></div></div>
+            <div class="fingerprint" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><div class="barcode" aria-hidden="true"></div>
           </div>
-        </div>
-
-        <div class="preview-column">
-          <div class="preview-label"><span>LIVE PREVIEW</span><span id="memberLabel">HANNI ID</span></div>
-          <article class="id-card" id="idCard">
-            <div class="card-top"><span class="bunny-mark">✦</span><span>NEWJEANS</span><small>BUNNIES CLUB</small></div>
-            <div class="card-body">
-              <div class="photo-frame"><img id="memberPhoto" src="hanni.jpeg" alt="Hanni" /></div>
-              <div class="info-panel">
-                <p class="card-type">OFFICIAL FAN MEMBER CARD</p>
-                <div class="info-line"><span>NOM</span><strong id="outName">TON NOM</strong></div>
-                <div class="info-line"><span>VILLE / PAYS</span><strong id="outLocation">PARIS, FRANCE</strong></div>
-                <div class="info-line"><span>BUNNY DEPUIS</span><strong id="outSince">2023</strong></div>
-                <div class="info-line song-line"><span>CHANSON PRÉFÉRÉE</span><strong id="outSong">Attention</strong></div>
-                <div class="sticker">NJ<br><i>✦</i></div>
-                <div class="signature"><span>SIGNATURE</span><em id="signature">hanni</em></div>
-              </div>
-              <div class="card-id"><span>BUNNIES ID N.º</span><b id="idNumber">#0217</b></div>
-              <div class="barcode" aria-hidden="true"></div>
-            </div>
-          </article>
-          <div class="actions mobile-actions">
-            <button id="downloadMobile" class="button primary" type="button">TÉLÉCHARGER MA BUNNIES ID <b>↗</b></button>
-            <button id="resetMobile" class="button text-button" type="button">RECOMMENCER <b>↻</b></button>
-          </div>
-        </div>
+        </article>
+        <div class="mobile-actions editor-actions"><button class="download" id="downloadMobile" type="button">DOWNLOAD MY BUNNIES ID <i>↗</i></button><button class="restart" id="resetMobile" type="button">MAKE ANOTHER <i>↻</i></button></div>
       </section>
-      <footer>MADE WITH <span>♡</span> FOR BUNNIES</footer>
-    </main>
-    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
-    <script src="app.js"></script>
-  </body>
-</html>
+    </div>
+    <footer>NEWJEANS · BUNNIES MEMBER CARD</footer>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script><script src="app.js"></script>
+</body></html>
